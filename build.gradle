@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+group = 'com.kingaspx'
+
+mainClassName = 'com.kingaspx.DownloadVideo.Main'
+
+repositories {
+    jcenter()
+    
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar']) 
+    testImplementation 'junit:junit:4.13'
+    
+    implementation 'com.github.sealedtx:java-youtube-downloader:2.1.1'
+}
